@@ -5,67 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Elite Guides | Luxury & Hidden Gems</title>
     <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #000;
+            --card-bg: #1a1a1a;
+            --text-color: #fff;
+            --gray-text: #bbb;
+        }
+
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
             margin: 0;
+            padding: 0;
             text-align: center;
+            line-height: 1.6;
         }
+
+        /* Navigacijski Meni */
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Header sekcija */
         header {
             padding: 100px 20px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1582719478250-c89cae4dfc5b?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            border-bottom: 2px solid #d4af37;
         }
-        .gold { color: #d4af37; text-transform: uppercase; letter-spacing: 3px; font-weight: bold; }
-        .container { max-width: 900px; margin: 40px auto; padding: 20px; }
+
+        h1.gold-text {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+
+        /* Glavni kontejner */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
         .card {
-            background: #111;
+            background: var(--card-bg);
             border: 1px solid #333;
             border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 30px;
-            transition: 0.3s;
+            padding: 50px;
+            transition: transform 0.3s;
         }
-        .card:hover { border-color: #d4af37; }
+
+        h2.gold-text {
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        /* Dugme */
         .btn {
             display: inline-block;
-            background: #d4af37;
+            background: var(--gold);
             color: #000;
-            padding: 18px 35px;
+            padding: 15px 35px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 50px;
             margin-top: 25px;
             text-transform: uppercase;
+            transition: opacity 0.3s;
         }
-        footer { font-size: 0.8rem; color: #555; margin-top: 80px; padding-bottom: 40px; border-top: 1px solid #222; padding-top: 20px; }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            font-size: 0.8rem;
+            color: var(--gray-text);
+            margin-top: 80px;
+            padding: 40px 20px;
+            border-top: 1px solid #222;
+        }
+
+        .social-links a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 600px) {
+            nav a { display: block; margin: 10px 0; }
+            h1.gold-text { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
 
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="sightseeing.html">Sightseeing</a>
+        <a href="transport.html">Transport</a>
+    </nav>
+
     <header>
-        <h1 class="gold">Travel Elite Guides</h1>
-        <p style="font-size: 1.2rem; color: #ccc;">Luxury Hotels • Top Restaurants • Hidden Gems</p>
+        <h1 class="gold-text">Travel Elite Guides</h1>
+        <p>Luxury Hotels • Top Restaurants • Hidden Gems</p>
     </header>
 
     <div class="container">
         <div class="card">
-            <h2 class="gold">TripAdvisor Recommendations</h2>
-            <p>Explore and book the best hotels and restaurants I recommend in my videos through the official TripAdvisor portal.</p>
-            <a href="https://www.facebook.com/share/v/1j6qx8BEKU/" class="btn" target="_blank">Check Best Travel Deals</a>
+            <h2 class="gold-text">Start Your Journey</h2>
+            <p>Explore and book the best hand-picked destinations, hotels, and local experiences recommended through our official travel network.</p>
+            <a href="destinations.html" class="btn">Check Best Travel Deals</a>
         </div>
-        <p style="color: #888;">Follow us on Facebook: <a href="https://www.facebook.com/marketingprodjone" target="_blank" style="color: #df4f37; text-decoration: none;">marketingprodjone</a></p>
-        <p style="color: #888;">New destinations added every week. <a href="https://www.tiktok.com/@traveleliteguides" target="_blank" style="color: #ffdb58; text-decoration: none;">Follow us on TikTok!</a></p>
-<p style="color: #888;">Subscribe to our <a href="https://www.youtube.com/@traveleliteguides" target="_blank" style="color: #ffdb58; text-decoration: none;">YouTube channel!</a></p>
-        
     </div>
 
     <footer>
-        <p>&copy; 2026 Travel Elite Guides</p>
-        <p>*As a TripAdvisor Associate, I may earn a commission from qualifying purchases made through the links above.</p>
+        <div class="social-links">
+            Follow us: 
+            <a href="https://www.facebook.com/marketingprodajone" target="_blank">Facebook</a> | 
+            <a href="#" target="_blank">TikTok</a> | 
+            <a href="#" target="_blank">YouTube</a>
+        </div>
+        <p>&copy; 2024 Travel Elite Guides</p>
+        <p>As a Travel Associate, I may earn a commission from qualifying purchases made through the links above.</p>
     </footer>
 
 </body>
