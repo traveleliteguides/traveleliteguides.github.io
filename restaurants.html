@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Dining | Travel Elite Guides</title>
+    <style>
+        :root { --gold: #d4af37; --dark-bg: #000; --card-bg: #1a1a1a; --text-color: #fff; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--dark-bg); color: var(--text-color); margin: 0; text-align: center; }
+        
+        nav { background: rgba(0, 0, 0, 0.9); padding: 20px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--gold); }
+        nav a { color: var(--text-color); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        nav a:hover { color: var(--gold); }
+
+        .container { max-width: 1100px; margin: 50px auto; padding: 20px; }
+        
+        .res-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+
+        .res-card { 
+            background: var(--card-bg); 
+            border-radius: 15px; 
+            overflow: hidden; 
+            border: 1px solid #333; 
+            text-align: left; 
+            transition: 0.3s;
+        }
+        
+        .res-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        
+        .res-img { 
+            width: 100%; 
+            height: 250px; 
+            background-size: cover; 
+            background-position: center;
+        }
+
+        .res-content { padding: 25px; }
+        .res-content h3 { color: var(--gold); margin: 0 0 10px 0; text-transform: uppercase; }
+        .tag { color: var(--gold); font-size: 0.7rem; font-weight: bold; letter-spacing: 1px; display: block; margin-bottom: 10px; }
+        .res-content p { color: #bbb; font-size: 0.9rem; line-height: 1.6; }
+        
+        .btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 20px; 
+            border: 1px solid var(--gold); 
+            color: var(--gold); 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-size: 0.8rem; 
+            font-weight: bold; 
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--gold); color: #000; }
+
+        footer { padding: 40px; border-top: 1px solid #222; margin-top: 50px; font-size: 0.8rem; color: #666; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="restaurants.html" style="color: var(--gold);">Restaurants</a>
+        <a href="sightseeing.html">Sightseeing</a>
+        <a href="transport.html">Transport</a>
+    </nav>
+
+    <div class="container">
+        <h1 style="color: var(--gold); letter-spacing: 3px; text-transform: uppercase;">Gourmet Experiences</h1>
+        <p style="margin-bottom: 40px;">The best flavors from around the world, curated for you.</p>
+
+        <div class="res-grid">
+            <div class="res-card">
+                <div class="res-img" style="background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1000&auto=format&fit=crop');"></div>
+                <div class="res-content">
+                    <span class="tag">MICHELIN STAR • PALMA</span>
+                    <h3>Marc Fosh</h3>
+                    <p>Contemporary Mediterranean cuisine in a stunning 17th-century setting. A must-visit for any food lover in Mallorca.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="res-card">
+                <div class="res-img" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1000&auto=format&fit=crop');"></div>
+                <div class="res-content">
+                    <span class="tag">SEAFOOD • CALA DEIÀ</span>
+                    <h3>Ca's Patró March</h3>
+                    <p>Famous for its fresh catch and incredible seaside location. Perfect for a long lunch by the turquoise water.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Travel Elite Guides</p>
+    </footer>
+
+</body>
+</html>
+
