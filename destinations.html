@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | Travel Elite Guides</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #000;
+            --card-bg: #1a1a1a;
+            --text-color: #fff;
+            --gray-text: #bbb;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Navigacija */
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover { color: var(--gold); }
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Kartica destinacije */
+        .destination-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #333;
+            text-align: left;
+            transition: transform 0.3s;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .destination-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('https://images.unsplash.com/photo-1512753360435-301583e40266?q=80&w=2070&auto=format&fit=crop'); /* Slika Mallorce */
+        }
+
+        .destination-content {
+            padding: 20px;
+        }
+
+        .destination-content h3 {
+            color: var(--gold);
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        .destination-content p {
+            font-size: 0.9rem;
+            color: var(--gray-text);
+            margin-bottom: 20px;
+            min-height: 60px;
+        }
+
+        /* Mini meni unutar kartice */
+        .dest-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .dest-links a {
+            font-size: 0.7rem;
+            color: #000;
+            background: var(--gold);
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 30px;
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html" style="color: var(--gold);">Destinations</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="sightseeing.html">Sightseeing</a>
+        <a href="transport.html">Transport</a>
+    </nav>
+
+    <h1 style="margin-top: 40px; text-transform: uppercase; letter-spacing: 3px; color: var(--gold);">Explore Destinations</h1>
+
+    <div class="container">
+        <div class="destination-card">
+            <div class="destination-image"></div>
+            <div class="destination-content">
+                <h3>Mallorca, Spain</h3>
+                <p>Dreaming of crystal-clear turquoise waters and vibrant Spanish culture? Mallorca is waiting for you.</p>
+                <div class="dest-links">
+                    <a href="hotels.html">Hotels</a>
+                    <a href="restaurants.html">Food</a>
+                    <a href="sightseeing.html">Sights</a>
+                    <a href="transport.html">Travel</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    <footer>
+        <p>&copy; 2024 Travel Elite Guides</p>
+    </footer>
+
+</body>
+</html>
+
