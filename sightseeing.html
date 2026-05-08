@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Must-See Attractions | Travel Elite Guides</title>
+    <style>
+        :root { --gold: #d4af37; --dark-bg: #000; --card-bg: #1a1a1a; --text-color: #fff; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--dark-bg); color: var(--text-color); margin: 0; text-align: center; }
+        
+        nav { background: rgba(0, 0, 0, 0.9); padding: 20px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--gold); }
+        nav a { color: var(--text-color); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        nav a:hover { color: var(--gold); }
+
+        .container { max-width: 1100px; margin: 50px auto; padding: 20px; }
+        
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+        .sight-card { 
+            position: relative; 
+            height: 400px; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            border: 1px solid #333;
+            transition: 0.4s;
+        }
+        
+        .sight-card:hover { border-color: var(--gold); transform: scale(1.02); }
+        
+        .sight-img { 
+            width: 100%; 
+            height: 100%; 
+            background-size: cover; 
+            background-position: center;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 20px;
+            text-align: left;
+        }
+
+        .overlay h3 { color: var(--gold); margin: 0; font-size: 1.4rem; text-transform: uppercase; }
+        .overlay p { font-size: 0.9rem; margin: 5px 0 0; color: #eee; }
+
+        footer { padding: 40px; border-top: 1px solid #222; margin-top: 50px; font-size: 0.8rem; color: #666; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="sightseeing.html" style="color: var(--gold);">Sightseeing</a>
+        <a href="transport.html">Transport</a>
+    </nav>
+
+    <div class="container">
+        <h1 style="color: var(--gold); letter-spacing: 3px; text-transform: uppercase;">Unforgettable Sights</h1>
+        <p style="margin-bottom: 40px;">Explore the hidden gems and iconic landmarks we recommend.</p>
+
+        <div class="gallery">
+            <div class="sight-card">
+                <div class="sight-img" style="background-image: url('https://images.unsplash.com/photo-1527438493490-671e3599902f?q=80&w=1000&auto=format&fit=crop');"></div>
+                <div class="overlay">
+                    <h3>Cap de Formentor</h3>
+                    <p>Mallorca's most dramatic meeting point of mountains and sea.</p>
+                </div>
+            </div>
+
+            <div class="sight-card">
+                <div class="sight-img" style="background-image: url('https://images.unsplash.com/photo-1544918877-460635b6d13e?q=80&w=1000&auto=format&fit=crop');"></div>
+                <div class="overlay">
+                    <h3>Palma Cathedral</h3>
+                    <p>The iconic Gothic cathedral overlooking the bay of Palma.</p>
+                </div>
+            </div>
+
+            <div class="sight-card">
+                <div class="sight-img" style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e917247a183?q=80&w=1000&auto=format&fit=crop');"></div>
+                <div class="overlay">
+                    <h3>Valldemossa</h3>
+                    <p>A charming mountain village where time seems to have stood still.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Travel Elite Guides</p>
+    </footer>
+
+</body>
+</html>
+
